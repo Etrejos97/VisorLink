@@ -88,7 +88,13 @@ export function SettingsPage() {
           </p>
           <div className={styles.apiKey}>
             <code>vl_demo_••••••••••••••••</code>
-            <button type="button" className="btn btn-ghost" disabled>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              onClick={() =>
+                alert('Función disponible en producción. Integración con backend Python en desarrollo.')
+              }
+            >
               Generar clave
             </button>
           </div>

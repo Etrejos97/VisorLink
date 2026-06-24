@@ -40,18 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(demo.user);
       return { ok: true };
     }
-    if (password.length >= 6) {
-      setUser({
-        id: `usr_${Date.now()}`,
-        email: email.toLowerCase(),
-        name: email.split('@')[0],
-        role: 'individual',
-        plan: 'free',
-        avatarInitials: email.slice(0, 2).toUpperCase(),
-      });
-      return { ok: true };
-    }
-    return { ok: false, error: 'Credenciales inválidas. Usa demo123 o contraseña de 6+ caracteres.' };
+    return { ok: false, error: 'Credenciales incorrectas. Usa los accesos demo disponibles.' };
   }, []);
 
   const loginDemo = useCallback((email: string) => {

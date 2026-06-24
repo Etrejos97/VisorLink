@@ -27,7 +27,11 @@ export function EnterprisePage() {
           <h3>¿Necesitas una implementación a medida?</h3>
           <p>SSO, SLA dedicado, integración SIEM y despliegue on-premise disponibles.</p>
         </div>
-        <button type="button" className="btn btn-primary" onClick={() => alert('Demo comercial: contacto@visorlink.io')}>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => alert('Contacta a ventas@visorlink.io para agendar tu demo Enterprise.')}
+        >
           Solicitar demo empresarial
         </button>
       </div>

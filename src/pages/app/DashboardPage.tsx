@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useScan } from '@/app/providers/ScanProvider';
 import { useAuth } from '@/app/providers/AuthProvider';
 import { KpiCard } from '@/components/dashboard/KpiCard';
@@ -11,6 +11,7 @@ import styles from './DashboardPage.module.css';
 export function DashboardPage() {
   const { history } = useScan();
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const stats = useMemo(() => {
     const total = history.length;
@@ -88,7 +89,7 @@ export function DashboardPage() {
           <h3>Actividad reciente</h3>
           <Link to="/app/history">Ver todo →</Link>
         </div>
-        <HistoryTable scans={recent} />
+        <HistoryTable scans={recent} onViewDetail={(id) => navigate(`/app/history/${id}`)} />
       </div>
     </div>
   );

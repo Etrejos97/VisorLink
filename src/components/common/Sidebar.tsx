@@ -34,6 +34,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.to !== '/app/history'}
               className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
               onClick={onClose}
             >

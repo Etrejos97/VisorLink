@@ -7,7 +7,15 @@ interface PlanCardProps {
   onSelect?: (planId: Plan['id']) => void;
 }
 
+function getButtonLabel(plan: Plan, isCurrent: boolean): string {
+  if (isCurrent) return 'Plan actual';
+  if (plan.id === 'enterprise') return 'Solicitar demo';
+  return plan.cta === 'Plan actual' ? 'Cambiar plan' : plan.cta;
+}
+
 export function PlanCard({ plan, isCurrent, onSelect }: PlanCardProps) {
+  const buttonLabel = getButtonLabel(plan, !!isCurrent);
+
   return (
     <div className={`${styles.card} ${plan.highlighted ? styles.highlighted : ''} ${isCurrent ? styles.current : ''}`}>
       {plan.highlighted && <span className={styles.badge}>Más popular</span>}
@@ -28,7 +36,7 @@ export function PlanCard({ plan, isCurrent, onSelect }: PlanCardProps) {
         onClick={() => onSelect?.(plan.id)}
         disabled={isCurrent}
       >
-        {isCurrent ? 'Plan actual' : plan.cta}
+        {buttonLabel}
       </button>
     </div>
   );

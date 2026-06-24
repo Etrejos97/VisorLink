@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useScan } from '@/app/providers/ScanProvider';
 import { ScanForm } from '@/components/scan/ScanForm';
 import { ScanLoading } from '@/components/scan/ScanLoading';
@@ -5,7 +6,11 @@ import { ScanResultCard } from '@/components/scan/ScanResultCard';
 import styles from './ScanPage.module.css';
 
 export function ScanPage() {
-  const { isScanning, loadingStep, loadingSteps, currentScan, runScan } = useScan();
+  const { isScanning, loadingStep, loadingSteps, currentScan, runScan, clearCurrentScan } = useScan();
+
+  useEffect(() => {
+    clearCurrentScan();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>

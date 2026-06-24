@@ -124,7 +124,7 @@ const hoursAgo = (h: number) => new Date(now - h * 3600000).toISOString();
 
 export const INITIAL_SCAN_HISTORY: ScanResult[] = [
   {
-    id: 'scan_mock_01',
+    id: 'scan_1719247200001_seed01',
     url: 'https://secure-login-bancolombia.xyz/verify?token=8a3f',
     score: 87,
     nivel: 'alto',
@@ -144,7 +144,7 @@ export const INITIAL_SCAN_HISTORY: ScanResult[] = [
     durationMs: 312,
   },
   {
-    id: 'scan_mock_02',
+    id: 'scan_1719247200002_seed02',
     url: 'https://paypal-account-suspended.top/restore',
     score: 78,
     nivel: 'alto',
@@ -164,7 +164,7 @@ export const INITIAL_SCAN_HISTORY: ScanResult[] = [
     durationMs: 289,
   },
   {
-    id: 'scan_mock_03',
+    id: 'scan_1719247200003_seed03',
     url: 'https://bit.ly/3xK9mP2',
     score: 42,
     nivel: 'medio',
@@ -184,7 +184,7 @@ export const INITIAL_SCAN_HISTORY: ScanResult[] = [
     durationMs: 245,
   },
   {
-    id: 'scan_mock_04',
+    id: 'scan_1719247200004_seed04',
     url: 'https://www.bancolombia.com/personas',
     score: 8,
     nivel: 'bajo',
@@ -204,7 +204,7 @@ export const INITIAL_SCAN_HISTORY: ScanResult[] = [
     durationMs: 198,
   },
   {
-    id: 'scan_mock_05',
+    id: 'scan_1719247200005_seed05',
     url: 'https://microsoft-verify-account.xyz/login',
     score: 91,
     nivel: 'alto',
@@ -224,7 +224,7 @@ export const INITIAL_SCAN_HISTORY: ScanResult[] = [
     durationMs: 334,
   },
   {
-    id: 'scan_mock_06',
+    id: 'scan_1719247200006_seed06',
     url: 'https://github.com/visorlink',
     score: 6,
     nivel: 'bajo',
