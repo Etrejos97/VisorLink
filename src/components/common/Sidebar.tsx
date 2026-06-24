@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/common/Logo';
 import { useAuth } from '@/app/providers/AuthProvider';
 import styles from './Sidebar.module.css';
@@ -37,7 +37,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
         <nav className={styles.nav}>
           {NAV_ITEMS.filter((item) => !item.enterpriseOnly || isEnterprise).map((item) => (
-            <NavLink
+            <Link
               key={item.to}
               to={item.to}
               className={`${styles.link} ${isItemActive(item.to) ? styles.active : ''}`}
@@ -45,7 +45,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             >
               <span className={styles.icon}>{item.icon}</span>
               {item.label}
-            </NavLink>
+            </Link>
           ))}
         </nav>
 
