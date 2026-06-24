@@ -1,0 +1,66 @@
+.card {
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.neon {
+  color: var(--neon);
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+.red {
+  color: var(--red);
+  text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+}
+
+.amber {
+  color: var(--amber);
+  text-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+}
+
+.green {
+  color: var(--green);
+  text-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+}
+
+.sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.trend {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 14px;
+}
+
+.trend.up {
+  color: var(--red);
+}
+
+.trend.down {
+  color: var(--green);
+}

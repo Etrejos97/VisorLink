@@ -1,0 +1,123 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border2);
+  background: rgba(0, 0, 0, 0.93);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 1px 30px rgba(0, 212, 255, 0.07);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--neon);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  font-size: 16px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scanQuick {
+  padding: 8px 16px !important;
+  font-size: 10px !important;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--neon);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.userPlan {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.logout {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.logout:hover {
+  color: var(--red);
+  border-color: rgba(255, 51, 102, 0.4);
+}
+
+@media (max-width: 900px) {
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .userInfo {
+    display: none;
+  }
+
+  .scanQuick {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 1rem;
+  }
+}

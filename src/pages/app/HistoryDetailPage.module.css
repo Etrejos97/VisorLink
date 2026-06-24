@@ -1,0 +1,11 @@
+.back {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--neon);
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.back:hover {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}

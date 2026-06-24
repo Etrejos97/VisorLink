@@ -1,0 +1,26 @@
+.scanArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.hint {
+  padding: 1.5rem;
+}
+
+.hint span {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--neon);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hint p {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}

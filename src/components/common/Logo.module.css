@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--neon);
+  text-shadow:
+    0 0 10px var(--neon),
+    0 0 30px rgba(0, 212, 255, 0.4);
+}
+
+.lg svg {
+  filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.3));
+}
+
+.lg .brand {
+  display: none;
+}

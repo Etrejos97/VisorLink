@@ -1,0 +1,43 @@
+.badge {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.md {
+  font-size: 10px;
+  padding: 5px 14px;
+}
+
+.sm {
+  font-size: 9px;
+  padding: 3px 10px;
+}
+
+.alto {
+  background: rgba(255, 51, 102, 0.1);
+  color: var(--red);
+  border: 1px solid rgba(255, 51, 102, 0.4);
+  box-shadow: 0 0 12px rgba(255, 51, 102, 0.2);
+  text-shadow: 0 0 8px rgba(255, 51, 102, 0.7);
+}
+
+.medio {
+  background: rgba(255, 170, 0, 0.08);
+  color: var(--amber);
+  border: 1px solid rgba(255, 170, 0, 0.35);
+  box-shadow: 0 0 12px rgba(255, 170, 0, 0.15);
+  text-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+}
+
+.bajo {
+  background: rgba(0, 255, 153, 0.06);
+  color: var(--green);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.12);
+  text-shadow: 0 0 8px rgba(0, 255, 153, 0.6);
+}

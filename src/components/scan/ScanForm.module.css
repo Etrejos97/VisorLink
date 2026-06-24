@@ -1,0 +1,120 @@
+.wrap {
+  width: 100%;
+  max-width: 700px;
+}
+
+.compact {
+  max-width: 100%;
+}
+
+.inputBox {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.inputBox:focus-within {
+  border-color: var(--neon);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.1), 0 0 30px rgba(0, 212, 255, 0.1);
+}
+
+.prefix {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--neon);
+  text-shadow: 0 0 6px rgba(0, 212, 255, 0.6);
+  padding: 0 14px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(0, 212, 255, 0.03);
+  letter-spacing: 0.1em;
+}
+
+.inputBox input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 17px 16px;
+  font-size: 13px;
+  color: var(--text);
+  min-width: 0;
+  letter-spacing: 0.04em;
+}
+
+.inputBox input::placeholder {
+  color: rgba(0, 212, 255, 0.22);
+}
+
+.scanBtn {
+  font-family: var(--display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--neon);
+  border: none;
+  padding: 0 28px;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transition: opacity var(--transition), box-shadow var(--transition), transform 0.1s;
+}
+
+.scanBtn:hover:not(:disabled) {
+  opacity: 0.9;
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.7);
+}
+
+.scanBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  justify-content: center;
+}
+
+.compact .examples {
+  justify-content: flex-start;
+}
+
+.pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 5px 12px;
+  letter-spacing: 0.06em;
+  background: rgba(0, 212, 255, 0.02);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.pill:hover:not(:disabled) {
+  color: var(--neon);
+  border-color: var(--border2);
+  text-shadow: 0 0 6px rgba(0, 212, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+  .prefix {
+    display: none;
+  }
+
+  .scanBtn {
+    padding: 0 16px;
+    font-size: 10px;
+  }
+}
