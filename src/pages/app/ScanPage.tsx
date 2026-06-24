@@ -32,7 +32,7 @@ export function ScanPage() {
 
         {!currentScan && !isScanning && (
           <div className={`card ${styles.hint}`}>
-            <span>// motor demo</span>
+            <span>motor demo</span>
             <p>
               El análisis simula reglas de phishing, TLDs de riesgo, suplantación de marca y
               reputación externa. En producción se conectará al motor Python + VirusTotal + GSB.

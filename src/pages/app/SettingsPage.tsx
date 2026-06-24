@@ -17,7 +17,6 @@ export function SettingsPage() {
 
       <div className={styles.grid}>
         <section className={`card ${styles.section}`}>
-          <h3>// perfil</h3>
           <div className={styles.field}>
             <label>Nombre</label>
             <input type="text" value={user?.name ?? ''} readOnly />
@@ -35,7 +34,6 @@ export function SettingsPage() {
         </section>
 
         <section className={`card ${styles.section}`}>
-          <h3>// plan y uso</h3>
           <div className={styles.planInfo}>
             <span className={styles.planName}>{currentPlan?.name}</span>
             <span className={styles.planPrice}>
@@ -61,7 +59,6 @@ export function SettingsPage() {
         </section>
 
         <section className={`card ${styles.section}`}>
-          <h3>// notificaciones</h3>
           {(
             [
               ['emailAlerts', 'Alertas por email'],
@@ -83,7 +80,7 @@ export function SettingsPage() {
         </section>
 
         <section className={`card ${styles.section}`}>
-          <h3>// api (futuro)</h3>
+          <h3>api (futuro)</h3>
           <p className={styles.apiNote}>
             La integración API REST estará disponible con Supabase + backend Python.
             Endpoint previsto: <code>POST /api/v1/scan</code>

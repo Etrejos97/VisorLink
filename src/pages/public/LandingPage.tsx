@@ -38,7 +38,7 @@ export function LandingPage() {
           <br />
           <span className={styles.dim}>Con Visor Link ya no caerás en estafas.</span>
         </p>
-        <div className={styles.tag}>// sistema activo — v0.1 beta</div>
+        <div className={styles.tag}>sistema activo — v0.1 beta</div>
         <p className={styles.sub}>
           Motor de detección de URLs maliciosas.
           <br />

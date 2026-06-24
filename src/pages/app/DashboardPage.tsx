@@ -56,7 +56,7 @@ export function DashboardPage() {
 
       <div className={styles.grid}>
         <div className={`card ${styles.block}`}>
-          <h3>// distribución por riesgo</h3>
+          <h3>Distribución por riesgo</h3>
           <div className={styles.distBars}>
             {(['bajo', 'medio', 'alto'] as const).map((level) => (
               <div key={level} className={styles.distRow}>
@@ -74,7 +74,7 @@ export function DashboardPage() {
         </div>
 
         <div className={`card ${styles.block} ${styles.recCard}`}>
-          <h3>// recomendación</h3>
+          <h3>Recomendación</h3>
           <p>{recommendation}</p>
           {user?.plan === 'free' && (
             <Link to="/app/plans" className="btn btn-primary" style={{ marginTop: '1rem' }}>
