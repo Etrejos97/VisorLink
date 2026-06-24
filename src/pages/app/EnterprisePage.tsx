@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '@/app/providers/AuthProvider';
 import { ENTERPRISE_METRICS } from '@/data/mock';
@@ -6,6 +7,7 @@ import styles from './EnterprisePage.module.css';
 
 export function EnterprisePage() {
   const { user } = useAuth();
+  const [feedbackMsg, setFeedbackMsg] = useState('');
 
   if (user?.plan !== 'enterprise') {
     return <Navigate to="/app/plans" replace />;
@@ -27,10 +29,28 @@ export function EnterprisePage() {
           <h3>¿Necesitas una implementación a medida?</h3>
           <p>SSO, SLA dedicado, integración SIEM y despliegue on-premise disponibles.</p>
         </div>
+        {feedbackMsg && (
+          <p
+            style={{
+              marginBottom: '1rem',
+              color: 'var(--neon)',
+              fontFamily: 'var(--mono)',
+              fontSize: '13px',
+              padding: '10px 14px',
+              border: '1px solid var(--border2)',
+              borderRadius: 'var(--radius)',
+              background: 'rgba(0,212,255,0.06)',
+            }}
+          >
+            ✓ {feedbackMsg}
+          </p>
+        )}
         <button
           type="button"
           className="btn btn-primary"
-          onClick={() => alert('Contacta a ventas@visorlink.io para agendar tu demo Enterprise.')}
+          onClick={() =>
+            setFeedbackMsg('Contacta a ventas@visorlink.io para agendar tu demo Enterprise.')
+          }
         >
           Solicitar demo empresarial
         </button>

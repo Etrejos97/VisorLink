@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useAuth } from '@/app/providers/AuthProvider';
 import { PLANS } from '@/data/mock';
 import styles from './SettingsPage.module.css';
 
 export function SettingsPage() {
   const { user, notifications, updateNotifications, logout } = useAuth();
+  const [apiMsg, setApiMsg] = useState('');
   const currentPlan = PLANS.find((p) => p.id === user?.plan);
 
   return (
@@ -92,12 +94,30 @@ export function SettingsPage() {
               type="button"
               className="btn btn-ghost"
               onClick={() =>
-                alert('Función disponible en producción. Integración con backend Python en desarrollo.')
+                setApiMsg(
+                  'Función disponible en producción. Integración con backend Python en desarrollo.',
+                )
               }
             >
               Generar clave
             </button>
           </div>
+          {apiMsg && (
+            <p
+              style={{
+                marginTop: '0.75rem',
+                color: 'var(--neon)',
+                fontFamily: 'var(--mono)',
+                fontSize: '12px',
+                padding: '8px 12px',
+                border: '1px solid var(--border2)',
+                borderRadius: 'var(--radius)',
+                background: 'rgba(0,212,255,0.06)',
+              }}
+            >
+              ✓ {apiMsg}
+            </p>
+          )}
         </section>
       </div>
 

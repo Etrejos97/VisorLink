@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/common/Logo';
 import { useAuth } from '@/app/providers/AuthProvider';
 import styles from './Sidebar.module.css';
@@ -20,6 +20,12 @@ interface SidebarProps {
 export function Sidebar({ open, onClose }: SidebarProps) {
   const { user } = useAuth();
   const isEnterprise = user?.plan === 'enterprise';
+  const { pathname } = useLocation();
+
+  const isItemActive = (to: string): boolean => {
+    if (to === '/app/history') return pathname.startsWith('/app/history');
+    return pathname === to;
+  };
 
   return (
     <>
@@ -34,8 +40,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <NavLink
               key={item.to}
               to={item.to}
-              end={item.to !== '/app/history'}
-              className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+              className={`${styles.link} ${isItemActive(item.to) ? styles.active : ''}`}
               onClick={onClose}
             >
               <span className={styles.icon}>{item.icon}</span>
